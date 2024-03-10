@@ -34,7 +34,7 @@ function DetailsScreen({route}) {
           <>
             <Image
               source={{uri: 'https://image.tmdb.org/t/p/original' + item.image}}
-              style={{width: responsiveSize(215), height: responsiveSize(320)}}
+              style={{width: '100%', height: responsiveSize(400)}}
             />
             <View style={styles.detailView}>
               <Text style={styles.title}>{item.title}</Text>
@@ -53,8 +53,12 @@ function DetailsScreen({route}) {
                   {item.stars} ({item.ratings})
                 </Text>
               </View>
-              <Text style={{fontSize: responsiveSize(9)}}>{item.genres}</Text>
-              <Text style={{fontSize: responsiveSize(9)}}>{item.date}</Text>
+              <Text style={{fontSize: responsiveSize(9), color: 'grey'}}>
+                {item.genres}
+              </Text>
+              <Text style={{fontSize: responsiveSize(9), color: 'grey'}}>
+                {item.date}
+              </Text>
               <Text style={styles.subTitle}>Overview</Text>
               <Text style={styles.overviewText}>{item.overview}</Text>
             </View>
@@ -92,7 +96,7 @@ const styles = StyleSheet.create({
   overviewText: {
     fontSize: responsiveSize(9),
     textAlign: 'justify',
-    color: 'black',
+    color: 'grey',
   },
 });
 
