@@ -131,7 +131,7 @@ const Card = ({item}) => {
         styles.card,
       ]}>
       <Image
-        source={{uri: 'https://image.tmdb.org/t/p/w92' + item.image}}
+        source={{uri: 'https://image.tmdb.org/t/p/w154' + item.image}}
         style={{width: responsiveSize(65), height: responsiveSize(100)}}
       />
       <View
@@ -148,7 +148,7 @@ const Card = ({item}) => {
             color="#FDD835"
             size={responsiveSize(10)}
           />
-          <Text>
+          <Text style={{color: 'grey'}}>
             {item.stars} ({item.ratings})
           </Text>
         </View>
