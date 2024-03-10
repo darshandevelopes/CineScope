@@ -15,6 +15,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {fetchData} from '../utils/api';
 import {useNavigation} from '@react-navigation/native';
+import AppDrawer from '../components/Drawer';
 
 const Tab = createBottomTabNavigator();
 
@@ -43,7 +44,7 @@ function Movies() {
   }, []);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <AppDrawer style={styles.container}>
       <SectionList
         style={{flex: 1, flexGrow: 1}}
         sections={moviesData}
@@ -62,7 +63,7 @@ function Movies() {
           </View>
         )}
       />
-    </SafeAreaView>
+    </AppDrawer>
   );
 }
 
@@ -91,7 +92,7 @@ function Series() {
   }, []);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <AppDrawer style={styles.container}>
       <SectionList
         style={{flex: 1, flexGrow: 1}}
         sections={seriesData}
@@ -110,7 +111,7 @@ function Series() {
           </View>
         )}
       />
-    </SafeAreaView>
+    </AppDrawer>
   );
 }
 
